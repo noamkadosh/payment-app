@@ -1,0 +1,11 @@
+  <nav id="navigation" class="no-padding flex-end-row">
+    <button id="menu" class="flex-center-column nav-btn" tabindex="0" (click)="toggleMobileMenu()">
+      <span class="mobile-menu-bar" [@animateTopBar]="mobileMenuButtonState"
+        (@animateTopBar.done)="animateMobileMenu($event)"></span>
+      <span class="mobile-menu-bar" [@animateBottomBar]="mobileMenuButtonState"
+        (@animateBottomBar.done)="animateMobileMenu($event)"></span>
+    </button>
+    <button class="nav-btn" id="logout" tabindex="0">
+      Log Out
+    </button>
+  </nav>
